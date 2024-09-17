@@ -1,10 +1,10 @@
 // components/QrCode.js
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import QRCode from 'qrcode';
 
 const QrCode = () => {
   const [qrCodeDataUrl, setQrCodeDataUrl] = useState('');
-  const url = 'https://site.gig.co.ke/ecobankfc2024';
+  const url = 'https://www.google.com'; // Update to your desired URL
 
   // Generate QR Code PNG data URL
   const generateQRCode = async () => {
@@ -25,7 +25,7 @@ const QrCode = () => {
   };
 
   // Generate QR Code URL on component mount
-  React.useEffect(() => {
+  useEffect(() => {
     generateQRCode();
   }, []);
 
@@ -34,7 +34,7 @@ const QrCode = () => {
       {qrCodeDataUrl ? (
         <>
           <img src={qrCodeDataUrl} alt="QR Code" />
-          <p>Scan this QR code to go to Ecobank!</p>
+          <p>Scan this QR code to go to Google!</p>
           <button onClick={downloadQRCode}>Download QR Code</button>
         </>
       ) : (
