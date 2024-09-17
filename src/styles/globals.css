@@ -1,0 +1,11 @@
+/* styles/globals.css */
+.qr-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .qr-container p {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
