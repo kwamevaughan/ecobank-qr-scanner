@@ -35,7 +35,7 @@ const QrCode = () => {
             <>
               <img src={qrCodeDataUrl} alt="QR Code" />
               <p>Scan this QR code to go to Google!</p>
-              <button onClick={downloadQRCode}>Download QR Code</button>
+              <button onClick={downloadQRCode}>Download QR Code. </button>
             </>
         ) : (
             <p>Loading QR code...</p>
